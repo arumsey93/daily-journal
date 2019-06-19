@@ -9,7 +9,7 @@ function eventListener() {
         let conceptID =  document.querySelector("#conceptsCovered").value
         let entryID = document.querySelector("#journalEntry").value
         let moodID = document.getElementById("mood")
-        let moodValue = moodID.options[moodID.selectedIndex].text
+        let moodValue = moodID.options[moodID.selectedIndex].value
                     let conceptCharacters = conceptID
                     let long_formCharacters = entryID
                     let x = /[^a-zA-Z0-9(){}:;\s.?!,"']/g
@@ -18,13 +18,26 @@ function eventListener() {
         if (conceptContain === null && long_formContain === null) {
             document.querySelector(".entryLog").innerHTML = ''
             let newObj = makeJournalObj()
-            console.log(newObj)
             API.postNewJournal(newObj).then(data => API.getJournalEntries().then(renderJournalEntries))
         }
             dateID.value = ""
             conceptID.value = ""
             entryID.value = ""
             moodValue.value = ""
-            console.log("This works") 
-    })
+            })
     }
+
+document.getElementsByName("moodFilter").forEach( event => {
+    event.addEventListener("click", event => {
+        const radioMood = event.target.value
+        console.log(radioMood)
+        API.getJournalEntries()
+        .then(entries => {
+            let moodString = entries.filter(entry => entry.mood === radioMood)
+            console.log(moodString)
+            renderJournalEntries(moodString)
+        })
+    })
+})
+
+

@@ -24,12 +24,29 @@
         <fieldset>
                 <label for ="mood">Mood for the day</label>
                 <select id ="mood">
-                    <option value>Happy</option>
-                    <option value>Sad</option>
-                    <option value>OK</option>
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="ok">OK</option>
                 </select>
         </fieldset>   
         <button type="button" id="record-btn">Record Daily Entry</button>
+        <fieldset class="">
+            <legend>Filter Journal Entires by Mood</legend>
+            <div class="filter">
+                <div>
+                    <input type="radio" name="moodFilter" value="happy" id="happy">
+                    <label for="happy">Happy</label>
+                </div>
+                <div>
+                    <input type="radio" name="moodFilter" value="sad" id="sad">
+                    <label for="sad">Sad</label>
+                </div>
+                <div>
+                    <input type="radio" name="moodFilter" value="ok" id="ok">
+                    <label for="ok">OK</label>
+                </div>
+            </div>
+        </fieldset>
     </form>
     <article class="entryLog">
 

@@ -1,5 +1,6 @@
 //function that will select the target for the DOM and display the entries
 const renderJournalEntries = (entries) => {
+    document.querySelector(".entryLog").innerHTML = ""
     entries.forEach(entry => {
         makeJournalEntryComponent(entry)
     });
@@ -23,8 +24,10 @@ const makeJournalObj = () => {
     let dateInput = document.querySelector("#journalDate")
     let conceptInput = document.querySelector("#conceptsCovered")
     let long_formInput = document.querySelector("#journalEntry")
-    let moodInput = document.querySelector("#mood")
+    let moodInput = document.getElementById("mood")
+    console.log(moodInput)
     let objArr = [dateInput.value, conceptInput.value, long_formInput.value, moodInput.value]
+    console.log(moodInput.value)
     let journalObj = createJournalObj(objArr)
     return journalObj
 }
