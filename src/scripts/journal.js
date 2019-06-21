@@ -8,3 +8,4 @@
 
 API.getJournalEntries().then(renderJournalEntries)
 eventListener()
+// getAndDisplayEntries()

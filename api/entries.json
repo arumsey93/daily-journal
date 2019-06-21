@@ -1,39 +1,11 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "07/24/2018",
-      "concept": "Array methods",
-      "entry": "We learned about 4 different array methods today. forEach made sense, but the others still confuse me.",
-      "mood": "ok"
-    },
-    {
-      "id": 2,
-      "date": "6/5/2019",
-      "concept": "APIs",
-      "entry": "Learning to use Postman with APIs, and learning more about objects and the DOM.",
-      "mood": "happy"
-    },
-    {
-      "date": "2019-06-19",
-      "concept": "Kristen Rules",
-      "entry": "sadkujjkbagibag",
-      "mood": "",
-      "id": 3
-    },
-    {
-      "date": "2019-06-19",
-      "concept": "asdfasdf",
-      "entry": "asdf",
+      "date": "asdfasdf",
+      "concept": "jbsdkjbskg",
+      "entry": "awgnagnjag",
       "mood": "happy",
-      "id": 4
-    },
-    {
-      "date": "2019-06-19",
-      "concept": "asagerggre",
-      "entry": "etrhwhrtwtrhthr",
-      "mood": "happy",
-      "id": 5
+      "id": 8
     }
   ]
 }
