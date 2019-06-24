@@ -40,4 +40,26 @@ document.getElementsByName("moodFilter").forEach( event => {
     })
 })
 
+document.querySelector("#inputSearch").addEventListener("keypress", (event) => {
+    if (event.keyCode === 13) {
+        const searchTerm = event.target.value
+        API.getJournalEntries()
+            .then(journalEntry => {
+                const matchingEntries = []
+
+                journalEntry.forEach(entry => {
+                    let match = false
+                    for (const prop of Object.values(entry)) {
+                        if (!match && typeof prop === "string" && prop.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                            match = true
+                            matchingEntries.push(entry)
+                        }
+                    }
+                })
+                event.target.value = ""
+                renderJournalEntries(matchingEntries)
+            })
+    }
+})
+
 
