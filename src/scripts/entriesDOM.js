@@ -73,10 +73,10 @@ const makeJournalEntryComponent = (journalEntry) => {
 
 function createEditForm(entries) {
     return `
-    <input id="date-edit" name="date-editor" type="hidden" value=${entries.date}>
+    <input id="date-edit" name="date-editor" type="hidden" value="${entries.date}">
     <input type="hidden" id="entries-id" value=${entries.id}>
-    <input id="concept-edit" name="concept-editor" type="text" value=${entries.concept}>
-    <input id="entry-edit" name="entry-editor" type="text" value=${entries.entry}>
+    <input id="concept-edit" name="concept-editor" type="text" value="${entries.concept}">
+    <input id="entry-edit" name="entry-editor" type="text" value="${entries.entry}">
     <select type="text" id="mood-edit">
         <option value="happy" ${entries.mood === "happy" ? "selected" : ""}>happy</option>
         <option value="sad" ${entries.mood === "sad" ? "selected" : ""}>sad</option>
