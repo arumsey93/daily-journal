@@ -1,0 +1,15 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.radioSearchDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+.filter {
+    display: flex;
+    flex-direction: row
+}

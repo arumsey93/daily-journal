@@ -1,0 +1,11 @@
+{
+  "entries": [
+    {
+      "date": "2019-06-27",
+      "concept": "Added Daily Journal Webpack",
+      "entry": "We moved webpack into daily journal and integrated.",
+      "mood": "happy",
+      "id": 11
+    }
+  ]
+}
